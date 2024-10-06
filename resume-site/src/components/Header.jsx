@@ -12,6 +12,9 @@ function Header() {
           <li>
             <NavLink to="/profile" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Profile</NavLink>
           </li>
+          <li>
+            <NavLink to="/resume" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Resume</NavLink>
+          </li>
         </ul>
       </nav>
       <div className="text-center mb-5 bg-gray-800 text-white py-2">
