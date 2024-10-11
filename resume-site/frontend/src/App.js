@@ -6,18 +6,18 @@ import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 import ResumePage from './pages/ResumePage';
 
-import BotPage from './pages/BotPage';
-import MachineLearningPage from './pages/MachineLearningPage';
-import GameEnginePage from './pages/GameEnginePage';
-import ProjectsPage from './pages/ProjectsPage';
+import { BotPage } from './pages/BotPage';
+import { MachineLearningPage } from './pages/MachineLearningPage';
+import { GameEnginePage } from './pages/GameEnginePage';
+import { ProjectPage } from './pages/ProjectPage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 function App() {
   return (
-      <div className="App">
-        <Router>
+    <div className="App">
+      <Router>
         <header className="App-header">
           <Header />
         </header>
@@ -31,15 +31,15 @@ function App() {
             <Route path="/chat-bot" element={<BotPage />} />
             <Route path="/machine-learning" element={<MachineLearningPage />} />
             <Route path="/game-engine" element={<GameEnginePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects" element={<ProjectPage />} />
           </Routes>
         </main>
 
         <footer>
           <Footer />
         </footer>
-        </Router>
-      </div>
+      </Router>
+    </div>
   );
 }
 

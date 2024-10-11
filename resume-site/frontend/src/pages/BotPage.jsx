@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const BotPage = () => {
+export const BotPage = () => {
   const [userInput, setUserInput] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
@@ -14,11 +14,11 @@ const BotPage = () => {
     setError('');
 
     try {
-      // const res = await axios.post('http://localhost:4567/api/chat', {
-      //   message: userInput,
-      // });
-      // setResponse(res.data.response); // Установка ответа от сервера
-      setResponse("hello");
+      const res = await axios.post('http://localhost:4568/api/chat', {
+        message: userInput,
+      });
+      setResponse(res.data.response); // Установка ответа от сервера
+      // setResponse("hello");
     } catch (err) {
       setError('Ошибка при отправке сообщения.'); // Обработка ошибок
       console.error('Error sending message:', err);
@@ -52,5 +52,3 @@ const BotPage = () => {
     </div>
   );
 };
-
-export default BotPage;

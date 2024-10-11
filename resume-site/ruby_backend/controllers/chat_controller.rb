@@ -16,6 +16,6 @@ class ChatController < Sinatra::Base
   private
 
   def process_message(message)
-    "Вы сказали: #{message}"  # Example processing of the message
+    "Вы сказали: #{message}"
   end
 end
