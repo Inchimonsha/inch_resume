@@ -1,2 +1,2 @@
 def get_response(input):
-    return f"hello {input}"
+    return f"Вы сказали: {input}"

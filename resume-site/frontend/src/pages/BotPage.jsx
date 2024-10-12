@@ -8,23 +8,22 @@ export const BotPage = () => {
   const [error, setError] = useState('');
 
   const sendMessage = async () => {
-    if (!userInput.trim()) return; // Проверка на пустой ввод
+    if (!userInput.trim()) return; // Check for empty input
 
     setLoading(true);
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:4568/api/chat', {
+      const res = await axios.post('/inch_resume/chat-bot', {
         message: userInput,
       });
-      setResponse(res.data.response); // Установка ответа от сервера
-      // setResponse("hello");
+      setResponse(res.data.result || res.data.error); // Set response from server
     } catch (err) {
-      setError('Ошибка при отправке сообщения.'); // Обработка ошибок
+      setError('Ошибка при отправке сообщения.'); // Error handling
       console.error('Error sending message:', err);
     } finally {
       setLoading(false);
-      setUserInput(''); // Очистка поля ввода
+      setUserInput(''); // Clear input field
     }
   };
 

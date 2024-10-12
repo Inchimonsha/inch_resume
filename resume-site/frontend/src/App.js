@@ -5,7 +5,6 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 import ResumePage from './pages/ResumePage';
-
 import { BotPage } from './pages/BotPage';
 import { MachineLearningPage } from './pages/MachineLearningPage';
 import { GameEnginePage } from './pages/GameEnginePage';
@@ -18,26 +17,21 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header className="App-header">
-          <Header />
-        </header>
+        <Header />
 
-        <main>
+        <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/resume" element={<ResumePage />} />
-
-            <Route path="/chat-bot" element={<BotPage />} />
-            <Route path="/machine-learning" element={<MachineLearningPage />} />
-            <Route path="/game-engine" element={<GameEnginePage />} />
-            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/inch_resume/" exact element={<HomePage />} />
+            <Route path="/inch_resume/profile" element={<ProfilePage />} />
+            <Route path="/inch_resume/resume" element={<ResumePage />} />
+            <Route path="/inch_resume/chat-bot" element={<BotPage />} />
+            <Route path="/inch_resume/machine-learning" element={<MachineLearningPage />} />
+            <Route path="/inch_resume/game-engine" element={<GameEnginePage />} />
+            <Route path="/inch_resume/projects" element={<ProjectPage />} />
           </Routes>
         </main>
 
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </Router>
     </div>
   );

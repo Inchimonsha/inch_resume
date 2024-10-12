@@ -7,13 +7,13 @@ function Header() {
       <nav className="flex justify-center space-x-4 py-4">
         <ul className="flex space-x-8">
           <li>
-            <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Home</NavLink>
+            <NavLink to="/inch_resume/" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/profile" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Profile</NavLink>
+            <NavLink to="/inch_resume/profile" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Profile</NavLink>
           </li>
           <li>
-            <NavLink to="/resume" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Resume</NavLink>
+            <NavLink to="/inch_resume/resume" className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-gray-400"}>Resume</NavLink>
           </li>
         </ul>
       </nav>
