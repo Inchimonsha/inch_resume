@@ -14,7 +14,7 @@ export const BotPage = () => {
     setError('');
 
     try {
-      const res = await axios.post('/inch_resume/chat-bot', {
+      const res = await axios.post('http://localhost:4568/inch_resume/chat-bot', {
         message: userInput,
       });
       setResponse(res.data.result || res.data.error); // Set response from server
